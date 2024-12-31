@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food & Accessories</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function filterItems() {
+            const query = document.getElementById('searchBar').value.toLowerCase();
+            const cards = document.getElementsByClassName('food-card');
+
+            for (let card of cards) {
+                const itemName = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                if (itemName.includes(query) || description.includes(query)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <h1>Food & Accessories</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adopt.html">Adopt</a></li>
+                <li><a href="rescue.html">Rescue</a></li>
+                <li><a href="food.html">Food & Accessories</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="food" class="about">
+            <h2>Premium Pet Food & Accessories</h2>
+            <p>Shop our curated collection of pet food and accessories to keep your furry friends happy, healthy, and entertained!</p>
+            
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search items..." onkeyup="filterItems()">
+            </div>
+            
+            <div class="food-grid" id="foodGrid">
+                <div class="food-card">
+                    <img src="images/dog food.jpg" alt="Dog Food">
+                    <h3>Premium Dog Food</h3>
+                    <p>Nutritious kibble for dogs of all sizes.</p>
+                    <p class="price">1500tk</p>
+                </div>
+                <div class="food-card">
+                    <img src="images/cat food.jpg" alt="Cat Food">
+                    <h3>Organic Cat Food</h3>
+                    <p>Wholesome ingredients your cat will love.</p>
+                    <p class="price">1300tk</p>
+                </div>
+                <div class="food-card">
+                    <img src="images/chewable pet toy.jpg" alt="Pet Toy">
+                    <h3>Chewable Pet Toy</h3>
+                    <p>Durable toy for endless playtime fun.</p>
+                    <p class="price">1000tk</p>
+                </div>
+                <div class="food-card">
+                    <img src="images/adjustable leash.jpg" alt="Pet Leash">
+                    <h3>Adjustable Leash</h3>
+                    <p>Comfortable leash for walks and outings.</p>
+                    <p class="price">2000tk</p>
+                </div>
+                <div class="food-card">
+                    <img src="images/pet bed.jpg" alt="Pet Bed">
+                    <h3>Cozy Pet Bed</h3>
+                    <p>Soft and snug for a restful sleep.</p>
+                    <p class="price">1250tk</p>
+                </div>
+                <div class="food-card">
+                    <img src="images/pet bowl.jpg" alt="Pet Bowl">
+                    <h3>Non-Slip Feeding Bowl</h3>
+                    <p>Perfect for food or water, with a stable base.</p>
+                    <p class="price">800tk</p>
+                </div>
+                <div class="food-card">
+                    <img src="images/pet shampoo.jpg" alt="Pet Shampoo">
+                    <h3>Pet Shampoo</h3>
+                    <p>Gentle and effective for shiny coats.</p>
+                    <p class="price">900tk</p>
+                </div>
+                <div class="food-card">
+                    <img src="images/pet collar.jpg" alt="Pet Collar">
+                    <h3>Comfortable Pet Collar</h3>
+                    <p>Stylish and durable for everyday use.</p>
+                    <p class="price">700tk</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Pet Adoption & Rescue</p>
+    </footer>
+</body>
+</html>

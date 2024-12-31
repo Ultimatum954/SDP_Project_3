@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+main {
+    flex: 1;
+}
+
+.header {
+    background-color: #4B0082;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.header nav ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.banner {
+    background-color: #EEE;
+    color: #4B0082;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.2em;
+}
+
+.btn {
+    background-color: #ff7300;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.about, .adopt, .contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2, .adopt h2, .stories h2, .contact h2 {
+    color: #4B0082;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.adopt .pet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.adopt .pet-card {
+    background-color: #F8F8F8;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.adopt .pet-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.adopt .pet-card h3 {
+    color: #4B0082;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/*about page*/
+.about h2 {
+    padding: 20px 0; 
+}
+
+.about ul {
+    padding: 15px 20px;
+    list-style-type: none; 
+    margin-left: 0; 
+}
+
+/*adopt page*/
+.search {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search h2 {
+    font-size: 2em;
+    color: #4B0082;
+    margin-bottom: 20px;
+}
+
+.search form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-group label {
+    flex: 1;
+    font-weight: bold;
+    text-align: right;
+}
+
+.form-group select,
+.form-group input {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search .btn {
+    background-color: #4B0082;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.search .btn:hover {
+    background-color: #663399;
+}
+
+/*rescue page*/
+.stories {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.stories h2 {
+    color: #4B0082;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.story-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.story-card {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.story-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.story-card h3 {
+    color: #4B0082;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.story-card p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+
+/*food page*/
+.food-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.food-card {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.food-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.food-card h3 {
+    color: #4B0082;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.food-card .price {
+    font-weight: bold;
+    color: #ff7300;
+    margin-top: 10px;
+}
+
+.search-container {
+    margin: 20px auto;
+    text-align: center;
+}
+
+#searchBar {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.food-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
+}
+
+.food-card {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(25% - 20px); 
+    box-sizing: border-box; 
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .food-card {
+        width: calc(33.33% - 20px); 
+    }
+}
+
+@media (max-width: 768px) {
+    .food-card {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .food-card {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .adopt .pet-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    .adopt .pet-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+/* Login and Sign Up */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
